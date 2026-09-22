@@ -1,0 +1,208 @@
+{
+  "corpus": {
+    "messages": 798,
+    "templates": 133,
+    "scam": 408,
+    "legit": 390,
+    "topics": 16,
+    "langs": [
+      "en",
+      "hinglish",
+      "hi",
+      "te"
+    ]
+  },
+  "nested_cv": {
+    "auc": [
+      0.9085671191553544,
+      0.011837435342073556
+    ],
+    "accuracy": [
+      0.8205513784461154,
+      0.01706102498758646
+    ],
+    "scam_recall": [
+      0.8661764705882353,
+      0.02439187314632299
+    ],
+    "false_alarm": [
+      0.22717948717948716,
+      0.013625979749319414
+    ]
+  },
+  "auc_ci95_template_bootstrap": [
+    0.8689561063123723,
+    0.9549922420724659
+  ],
+  "by_language": {
+    "en": {
+      "n": 324,
+      "accuracy": 0.8888888888888888,
+      "auc": 0.9505112942612943,
+      "scam_recall": 0.9285714285714286,
+      "false_alarm": 0.15384615384615385
+    },
+    "hinglish": {
+      "n": 162,
+      "accuracy": 0.808641975308642,
+      "auc": 0.8940781440781441,
+      "scam_recall": 0.9285714285714286,
+      "false_alarm": 0.32051282051282054
+    },
+    "hi": {
+      "n": 156,
+      "accuracy": 0.7756410256410257,
+      "auc": 0.8865877712031558,
+      "scam_recall": 0.8461538461538461,
+      "false_alarm": 0.2948717948717949
+    },
+    "te": {
+      "n": 156,
+      "accuracy": 0.8076923076923077,
+      "auc": 0.8798487836949376,
+      "scam_recall": 0.8461538461538461,
+      "false_alarm": 0.23076923076923078
+    }
+  },
+  "leave_one_topic_out": {
+    "n": 798,
+    "accuracy": 0.7819548872180451,
+    "auc": 0.8734477124183007,
+    "scam_recall": 0.8578431372549019,
+    "false_alarm": 0.29743589743589743
+  },
+  "leave_one_topic_out_per_topic": {
+    "challan": {
+      "n": 60,
+      "accuracy": 1.0,
+      "auc": 1.0,
+      "scam_recall": 1.0,
+      "false_alarm": 0.0
+    },
+    "digital_arrest": {
+      "n": 30,
+      "accuracy": 1.0,
+      "scam_recall": 1.0
+    },
+    "electricity": {
+      "n": 60,
+      "accuracy": 0.6166666666666667,
+      "auc": 1.0,
+      "scam_recall": 0.23333333333333334,
+      "false_alarm": 0.0
+    },
+    "family": {
+      "n": 60,
+      "accuracy": 0.5,
+      "auc": 0.5688888888888889,
+      "scam_recall": 1.0,
+      "false_alarm": 1.0
+    },
+    "investment": {
+      "n": 30,
+      "accuracy": 1.0,
+      "scam_recall": 1.0
+    },
+    "job": {
+      "n": 60,
+      "accuracy": 0.9166666666666666,
+      "auc": 1.0,
+      "scam_recall": 1.0,
+      "false_alarm": 0.16666666666666666
+    },
+    "kyc": {
+      "n": 72,
+      "accuracy": 0.6666666666666666,
+      "auc": 0.7714285714285714,
+      "scam_recall": 1.0,
+      "false_alarm": 0.8
+    },
+    "loan": {
+      "n": 60,
+      "accuracy": 0.9166666666666666,
+      "auc": 1.0,
+      "scam_recall": 0.8333333333333334,
+      "false_alarm": 0.0
+    },
+    "lottery": {
+      "n": 30,
+      "accuracy": 0.2,
+      "scam_recall": 0.2
+    },
+    "otp": {
+      "n": 60,
+      "accuracy": 0.9,
+      "auc": 1.0,
+      "scam_recall": 0.8,
+      "false_alarm": 0.0
+    },
+    "parcel": {
+      "n": 66,
+      "accuracy": 1.0,
+      "auc": 1.0,
+      "scam_recall": 1.0,
+      "false_alarm": 0.0
+    },
+    "personal": {
+      "n": 30,
+      "accuracy": 0.0,
+      "false_alarm": 1.0
+    },
+    "reminders": {
+      "n": 30,
+      "accuracy": 1.0,
+      "false_alarm": 0.0
+    },
+    "rewards": {
+      "n": 60,
+      "accuracy": 0.6833333333333333,
+      "auc": 1.0,
+      "scam_recall": 1.0,
+      "false_alarm": 0.6333333333333333
+    },
+    "transactional": {
+      "n": 30,
+      "accuracy": 0.9333333333333333,
+      "false_alarm": 0.06666666666666667
+    },
+    "upi": {
+      "n": 60,
+      "accuracy": 0.9,
+      "auc": 0.9566666666666668,
+      "scam_recall": 1.0,
+      "false_alarm": 0.2
+    }
+  },
+  "cross_lingual_zero_shot": {
+    "en+hinglish -> hi": {
+      "n": 156,
+      "accuracy": 0.6666666666666666,
+      "auc": 0.930473372781065,
+      "scam_recall": 0.3333333333333333,
+      "false_alarm": 0.0
+    },
+    "en+hinglish -> te": {
+      "n": 156,
+      "accuracy": 0.5384615384615384,
+      "auc": 0.9317882971729126,
+      "scam_recall": 0.07692307692307693,
+      "false_alarm": 0.0
+    },
+    "en+hinglish+hi -> te": {
+      "n": 156,
+      "accuracy": 0.6858974358974359,
+      "auc": 0.9386916502301118,
+      "scam_recall": 0.3717948717948718,
+      "false_alarm": 0.0
+    }
+  },
+  "efficiency": {
+    "nonzero_weights": 11978,
+    "size_kb_sparse_fp16": 70.2,
+    "ms_per_message_laptop_cpu": 0.43,
+    "C": 16.0
+  },
+  "C_chosen": {
+    "16.0": 25
+  }
+}
