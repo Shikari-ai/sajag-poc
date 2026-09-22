@@ -1,4 +1,4 @@
-"""Operating points and the shortcut check quoted in the README.
+"""Operating points, the shortcut check, and the demo-pair scores quoted in the README and deck.
 
 Nested CV picked C=16 on every fold, so fixed C=16 reproduces its out-of-fold scores.
 """
@@ -56,3 +56,9 @@ p = np.zeros(len(y))
 for tr, te in StratifiedGroupKFold(5, shuffle=True, random_state=0).split(X, y, g):
     p[te] = words_only_model().fit(X[tr], y[tr]).predict_proba(X[te])[:, 1]
 print(f"grouped CV, cues removed (seed 0): {roc_auc_score(y, p):.3f}")
+
+# out-of-fold scores for the "same topic, opposite verdict" pairs in the pitch deck
+mean_oof = np.mean(oofs, axis=0)
+for tid in ["kyc.scam.en.0", "kyc.legit.en.0", "parcel.scam.te.0", "parcel.legit.te.0",
+            "family.scam.en.0", "family.legit.en.0"]:
+    print(f"out-of-fold score {tid:20s} {100 * mean_oof[g == tid].mean():5.1f}%")

@@ -55,7 +55,8 @@ Victims don't scan messages; they panic. So nothing here waits for a button pres
 ## Results
 
 Every number comes from `make eval`, which writes [`data/results.json`](data/results.json), or from
-`make ablation` ([tools/ablation.py](tools/ablation.py)): the operating points and the cue-removal check.
+`make ablation` ([tools/ablation.py](tools/ablation.py)): the operating points, the cue-removal check
+and the out-of-fold scores of the example message pairs.
 
 **Corpus.** 798 messages from 133 templates across 16 topics:
 * 408 scam, 390 genuine.
